@@ -15,11 +15,12 @@ guesses_no = 0
 guessed_it = false
 until guesses_no == 10 || guessed_it
   puts "You have got #{ 10 - guesses_no} guesses left"
+  cess = "*" * (10- guesses_no)
   print "Make a guess"
   guess = gets.to_i
-  guesses_no += 1
-
+    puts cess
   #compare the target to the guess
+  guesses_no+=1
   #print a correct message
   if guess  < target
     puts "Oops you suck your guess too LOW"
@@ -29,7 +30,9 @@ until guesses_no == 10 || guessed_it
     puts "Good job, #{name} !!!"
     puts "You guessed my number in #{guesses_no} guesses!"
     guessed_it = true
+
   end
+  
 end
 #If a player runs out of the number of guesses tell him the answer
 unless guessed_it
