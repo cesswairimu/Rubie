@@ -5,14 +5,12 @@ end
 votes = Hash.new(0)
 lines.each do |line|
 name = line.chomp
+name.upcase!
 if votes[name] 
   votes[name] += 1
 else
   votes[name] = 1
 end
 end
-votes = Hash.new(0)
-votes["Avan Probook"] = 1
-p votes["Avan Probook"]
-p votes["Think Pad"]
+p votes
 
