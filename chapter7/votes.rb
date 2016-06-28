@@ -11,5 +11,8 @@ else
   votes[name] = 1
 end
 end
-p votes
+votes = Hash.new(0)
+votes["Avan Probook"] = 1
+p votes["Avan Probook"]
+p votes["Think Pad"]
 
