@@ -1,11 +1,7 @@
 module AcceptComments
   def comments
-    if @comments
-      @comments
-    else
-      @comments = []
+      @comments ||= []
     end
-  end
 def add_comment(comment)
   comments << comment
 end
@@ -27,12 +23,24 @@ class Song < Clip
   attr_accessor :beats_per_minute
 end
 
+class Photo
+include  AcceptComments
+def initialize
+  @format = 'JPEG'
+end
+end
+
+
 video = Video.new
 video.add_comment("This music is dope")
 video.add_comment("Wierd ending")
 song = Song.new
 song.add_comment("Kinda of hot though")
-p video.comments, song.comments
+photo = Photo.new
+photo.add_comment ("Looking cool")
+
+p video.comments, song.comments, photo.comments
+ 
 
 
   
