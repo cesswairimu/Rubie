@@ -1,12 +1,14 @@
 class CelestialBody
   attr_accessor :type, :name
 end
- altair =CelestialBody.new
+ altair = CelestialBody.new
  altair.name = 'Altair'
  altair.type ='star'
- polaris =altair
+ polaris = CelestialBody.new
+ polaris.type ='star'
  polaris.name = 'Polaris'
- vega = polaris 
+ vega =  CelestialBody.new 
+ vega.type ='star'
  vega.name = 'Vega'
  puts altair.name, polaris.name, vega.name
 

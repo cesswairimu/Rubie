@@ -1,5 +1,5 @@
 class   Counter
-  def intialize
+  def initialize
     @count = 0
   end
   def increment
@@ -7,11 +7,11 @@ class   Counter
     puts @count
   end
 end
-  a = Counter.new
-  b = Counter.new
-  b = c
-  d=c
-  a.increment
-  b.increment
-  c.increment
-  d.increment
+a = Counter.new
+b = Counter.new
+c = b
+d = c
+a.increment
+b.increment
+c.increment
+d.increment
