@@ -1,4 +1,5 @@
 class   WordSplitter
+  include Enumerable
   attr_accessor :string
   def each
     string.split(" ").each do |word|
@@ -7,8 +8,11 @@ yield word
   end
 end
 plitter = WordSplitter.new
-plitter.string = (" five six seven eight")
+plitter.string = "how do you do"
 plitter.each do |word|
 puts word
 end
+p plitter.find_all {|word| word.include? ("d") }
+p plitter.reject { |word| word.include?("d") }
+p plitter.map { |word| word.reverse }
 
