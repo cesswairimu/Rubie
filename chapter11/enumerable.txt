@@ -1,0 +1,17 @@
+#this class helps you perform various operations with the words in a string
+
+class Splitter
+
+  include Enumerable
+
+#string to split into words
+attr_accessor :string
+
+#passes each word in the string to the block
+#one at a time
+  def each
+string.split(" ").each do |word|
+  yield word
+end
+  end
+end
