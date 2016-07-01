@@ -11,10 +11,10 @@ class Oven
 
   def bake
       unless @state == "on"
-        return "You need to put the oven on first"
+        raise "You need to put the oven on first"
       end
         if @contents == nil
-          puts "There are no contents in the oven"
+       raise "There are no contents in the oven"
         end
    "goldenbrown  #{ contents }"
 
@@ -22,7 +22,7 @@ class Oven
 end
 dinner = ['pie', 'chicken', 'rice']
 oven = Oven.new
-oven.power_onn
+oven.power_off
 dinner.each do |item|
  oven.contents = item
  puts "Serving #{oven.bake} "
