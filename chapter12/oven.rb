@@ -20,9 +20,9 @@ class Oven
 
   end
 end
-dinner = ['pie', 'chicken', 'rice']
+dinner = ['pie', nil, 'rice']
 oven = Oven.new
-oven.power_off
+oven.power_onn
 dinner.each do |item|
   begin
  oven.contents = item
