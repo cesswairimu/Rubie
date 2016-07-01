@@ -22,10 +22,14 @@ class Oven
 end
 dinner = ['pie', 'chicken', 'rice']
 oven = Oven.new
-oven.power_off
+oven.power_onn
 dinner.each do |item|
+  begin
  oven.contents = item
- puts "Serving #{oven.bake} "
+ puts "Serving #{ oven.bake}"
+  rescue
+    puts "Error: There was nothing in the oven"
+  end
 end
 
   
