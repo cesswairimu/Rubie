@@ -39,6 +39,8 @@ dinner.each do |item|
     puts "#{error.message}"
     oven.power_onn
     retry
+  ensure
+    oven.power_off
   end
 end
 
