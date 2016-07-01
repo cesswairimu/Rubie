@@ -26,7 +26,7 @@ class Oven
 
   end
 end
-dinner = ['pie', nil, 'rice']
+dinner = ['pie', 'nil', 'rice']
 oven = Oven.new
 oven.power_off
 dinner.each do |item|
@@ -38,6 +38,7 @@ dinner.each do |item|
   rescue OvenOffError => error
     puts "#{error.message}"
     oven.power_onn
+    retry
   end
 end
 
