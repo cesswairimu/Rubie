@@ -1,0 +1,1 @@
+var search_data = {"index":{"searchIndex":["wordsplitter","each()"],"longSearchIndex":["wordsplitter","wordsplitter#each()"],"info":[["WordSplitter","","WordSplitter.html","",""],["each","WordSplitter","WordSplitter.html#method-i-each","()",""]]}}
