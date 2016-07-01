@@ -1,3 +1,9 @@
+class OvenOffError < StandardError
+end
+
+class OvenEmptyError < StandardError
+end
+
 class Oven
   attr_accessor :contents
   def power_onn
@@ -11,10 +17,10 @@ class Oven
 
   def bake
       unless @state == "on"
-        raise "You need to put the oven on first"
+        raise OvenOffError, "You need to put the oven on first"
       end
         if @contents == nil
-       raise "There are no contents in the oven"
+       raise OvenEmptyError, "There are no contents in the oven"
         end
    "goldenbrown  #{ contents }"
 
@@ -22,13 +28,16 @@ class Oven
 end
 dinner = ['pie', nil, 'rice']
 oven = Oven.new
-oven.power_onn
+oven.power_off
 dinner.each do |item|
   begin
  oven.contents = item
  puts "Serving #{ oven.bake}"
-  rescue => error
-    puts "Error: #{error.message}"
+  rescue OvenEmptyError => error
+    puts " #{error.message}"
+  rescue OvenOffError => error
+    puts "#{error.message}"
+    oven.power_onn
   end
 end
 
