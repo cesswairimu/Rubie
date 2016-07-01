@@ -1,11 +1,11 @@
 class Oven
   attr_accessor :contents
   def power_onn
-    puts "Turning oven is on"
+    puts "Turning..... oven is on"
     @state = "on"
   end
   def power_off
-    puts "Turnind oven is off"
+    puts "Turning..... oven is off"
     @state = "off"
   end
 
@@ -22,13 +22,13 @@ class Oven
 end
 dinner = ['pie', 'chicken', 'rice']
 oven = Oven.new
-oven.power_onn
+oven.power_off
 dinner.each do |item|
   begin
  oven.contents = item
  puts "Serving #{ oven.bake}"
-  rescue
-    puts "Error: There was nothing in the oven"
+  rescue => error
+    puts "Error: #{error.message}"
   end
 end
 
