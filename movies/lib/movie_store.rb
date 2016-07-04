@@ -11,6 +11,12 @@ class MovieStore
     end
   end
 
+  def find(id)
+    @store.transaction do
+      @store[id]
+    end
+  end
+
   def save(movie)
      @store.transaction do
        unless movie.id 
