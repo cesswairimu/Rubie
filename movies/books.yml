@@ -1,0 +1,4 @@
+---
+MRSL: !ruby/object:Book
+  title: Marshall
+  pages: 406
