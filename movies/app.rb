@@ -8,7 +8,7 @@ get ('/movies') do
   'Coming Soon'
 end
 get ('/movies/new') do
-erb :new
+  erb :new
 end
 
 
@@ -21,6 +21,10 @@ post('/movies/create') do
   redirect '/movies/new'
 end
 get ('/movies/:id') do
-  "Received a request for movie ID: #{params['id']}"
-end
+  id = params['id'].to_i   
+              @movie= store.find(id)
+              erb :show
+              end
+
+
 
