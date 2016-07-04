@@ -3,14 +3,7 @@ require 'movie'
 require 'movie_store'
 
 get ('/movies') do
-  @movies = []
-
-  @movies[0] = Movies.new
-  @movies[0].title = "Saw"
-  @movies[1]= Movies.new
-  @movies[1].title = "Alien"
-  @movies[2] = Movies.new
-  @movies[2].title = "Young and Hungry"
+  @movies = store.all
   erb :index
   'Coming Soon'
 end

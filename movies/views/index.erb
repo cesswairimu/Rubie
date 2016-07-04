@@ -9,8 +9,11 @@
                 <h1> My Movies</h1>
                 <ul>
                     <% @movies.each do |movie| %>
+                        <li>
+                            <a href="/movies/<%= movie.id%>">
 
-                        <li><%= movie.title %></li>
+                                <%= movie.title %>
+                        </li>
                     </ul>
                     <a href="/movies/new"> Add New Movie</a>
 
