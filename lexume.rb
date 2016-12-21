@@ -9,7 +9,7 @@ lexer = Lexeme.define do
   # token :WORD => /^[ \w\_ ]+$/
 end
 tokens = lexer.analyze do
-  from_string 'Hello! My name is Bunch . You killed my cat. Prepare to die'
+  from_string 'ello My name is Bunch . You killed my cat. Prepare to die'
 end
 tokens.each do |t|
   puts "#{ t.name }: #{t.value}"
