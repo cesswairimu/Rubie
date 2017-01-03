@@ -6,6 +6,7 @@ def birthdate
   birthdate = Date.new(1994, 3, 9)
 end
 def countdown
+  Rails.logger.debug "DEBUG: Entering the owner's countdown method"
   today = Date.today
   birthday = Date.new(today.year, birthdate.month, birthdate.day)
   if birthday > today
