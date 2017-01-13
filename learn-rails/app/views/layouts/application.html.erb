@@ -9,9 +9,13 @@
     </head>
 
     <body>
+        <header>
+            <%= render 'layouts/navigation' %>
+        </header>
+        <main role="main">
         <%= render 'layouts/messages' %>
-        <%= render 'layouts/navigation' %>
         <%= yield %>
+        </main>
         <%= render 'layouts/footer' %>
     </body>
 </html>
