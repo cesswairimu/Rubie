@@ -1,5 +1,7 @@
 class ContactController < ApplicationController
-   def process_form
+  def new
+  end
+  def process_form
     if params[:name].blank?
       raise 'Name is blank!'
     end
