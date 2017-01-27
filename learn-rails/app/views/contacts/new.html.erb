@@ -1,2 +1,6 @@
-<h1>Contacts#new</h1>
-<p>Find me in app/views/contacts/new.html.erb</p>
+<% content_for :title do %>Contact<% end %>
+<%= form_for (@contact) do |f| %>
+    <%= f.text_field :name, placeholder: "Name goes here" %>
+    <%= f.email_field :email, placeholder: "Enter email" %>
+    <%= f.text_field :content, placeholder: "Enter your content here..." %>
+<% end %>
