@@ -1,0 +1,9 @@
+- !ruby/object:Person
+  name: Cess
+  sname: cs
+  email: cess@geek.com
+- !ruby/object:Person
+  name: Malach Salama
+  sname: MS
+  email: m@salama.com
+
