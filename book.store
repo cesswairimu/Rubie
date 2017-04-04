@@ -1,0 +1,21 @@
+---
+Dawn:
+- !ruby/object:Book
+  title: Dawn
+  author: Fiction
+  genre: Cessito
+Mermaid:
+- !ruby/object:Book
+  title: Mermaid
+  author: Adventure
+  genre: Kingstone
+Year of Griffin:
+- !ruby/object:Book
+  title: Year of Griffin
+  author: Diana Wyne
+  genre: Horror
+Barry:
+- !ruby/object:Book
+  title: Barry
+  author: Me
+  genre: Jokes
