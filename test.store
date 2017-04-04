@@ -1,0 +1,7 @@
+---
+user:
+- !ruby/struct:User
+  f_name: tryty
+  l_name: ytte
+greeting:
+  hello: world
