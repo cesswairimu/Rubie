@@ -1,0 +1,6 @@
+require 'redis'
+
+r = Redis.new
+r.set('moon', 'fruit')
+foo = r.get('moon')
+puts foo
